@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../assets/css/styles.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+    <div>
+        <div id="loader_over_layout" class="loader-over-layout" style="display: none;">
+            <div id="loader" class="loader-div">
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </div>
+        </div>
+        <div id="login">
+            <div class="container">
+                <p id="msg">
+                </p>
+                <div class="row" style="display:block;text-align: center; margin-top:6rem">
+                    <img class="logo" src="../assets/images/Shiratech_Logo_Pos_Hor.png">
+                </div>
+                <div class="container">
+                    <div class="row" style="color:#04003e">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12 login-row">
+                                    <i class="material-icons prefix login-icon">account_circle</i>
+                                    <input placeholder="USERNAME" id="username" type="text" class=" login-input"
+                                        onfocusin="focusInput(this)" onfocusout="focusOut(this)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 login-row">
+                                    <i class="material-icons prefix login-icon">lock</i>
+                                    <input placeholder="PASSWORD" id="password" type="password" class=" login-input"
+                                        onfocusin="focusInput(this)" onfocusout="focusOut(this)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="default" id="error-label-form">
+                                    <span class="error-label">
+                                        <svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor"
+                                            focusable="false" width="16px" height="16px" viewBox="0 0 24 24"
+                                            xmlns="https://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+                                            </path>
+                                        </svg>
+                                        Username or password is incorrect.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12" style="padding:0px">
+                                    <a class="waves-effect waves-light btn" style="width:inherit" onclick="login()">SIGN
+                                        IN</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row margin-bottom" style="display:block;text-align: center; margin-top:70px">
+                    <img class="icomox" src="../assets/images/Shiratech_iCOMOX.png">
+                </div>
+                <div class="row" style="display:block;text-align: center;">
+                    <img class="icomox" src="../assets/images/iCOMOX_hero.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="../assets/androidjs.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../assets/js/scripts.js"></script>
+
+</body>
+
+</html>

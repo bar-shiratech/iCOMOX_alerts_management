@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../assets/css/styles.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body
+    onload="setBreadcrumb(getQueryParam('alert-level')), totalAssets(getQueryParam('alert-level'), getTickets()), resetSearchValue(), buildTable(getQueryParam('alert-level'), getTickets()), setHeight('cards')">
+    <div>
+        <header id="header">
+            <div>
+                <div class="row blue-grey" style="color:white; padding:5px 0px;">
+                    <div class="col s6">
+                        <div class="row margin-bottom" style="display:block; padding: 20px 0px 10px 20px; ">
+                            <img class="" style="max-width:170px" src="../assets/images/shiratech_icomox_logo.png">
+                        </div>
+                    </div>
+                    <div class="col s6" onclick="logout(-2), resetAlertsCards()"
+                        style="display: grid;justify-content: right; padding-right: 0px;">
+                        <div class="row" style=" margin: 0px;" style="display: grid;justify-content: right;">
+                            <div class="col s6" style="font-size: 12px; padding-top:22px; padding-right: 0px;">
+                                <span style="padding-right: 10px;">LOGOUT</span>
+                            </div>
+                            <div class="col s6"
+                                style="font-size: 12px; padding-top:25px; padding-right: 0px; padding-left: 14px;">
+                                <span>
+                                    <i class=" material-icons" style="font-size: 14px;">arrow_forward</i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav id="breadcrumb">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a onclick="window.history.go(-1)" class="breadcrumb" style="margin-left:10px">Home</a>
+                    <a id="nav_last_child" href="#" class="breadcrumb"></a>
+                </div>
+            </div>
+        </nav>
+        <div class="container container-95" id="alerts_page" style="width:95%;">
+            <div class="row margin-bottom" style="padding:0px 0.75rem">
+                <div class="input-field col s12 search-input " style="margin-top:15px; border-radius: 3px;">
+                    <i class="material-icons prefix login-icon" style=" color:#cfd8dc">search</i>
+                    <input placeholder="Search" id="search" type="text" class=" login-input"
+                        onfocusin="focusInput(this)" onfocusout="focusOut(this)"
+                        onkeyup="search(this.value,getQueryParam('alert-level'))">
+                </div>
+            </div>
+            <div id="totalCards" style="padding-bottom:5px"> </div>
+            <div class="row no-search-msg" style="display:none; margin:0px; " id="no_search_results_msg_parent">
+                <div class="col s12" style="text-align:center">
+                    <img src="../assets/icon/icon.png" alt="icomox icon">
+                </div>
+                <div class="col s12" style="text-align: center;">
+                    <h6 id="no_search_results_msg" style="margin:8px 0px 0px 0px"></h6>
+                </div>
+            </div>
+            <div id="cards" style="overflow: auto;">
+            </div>
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="../assets/androidjs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../assets/js/scripts.js"></script>
+</body>
+
+</html>
