@@ -136,7 +136,9 @@ function fetchData() {
             showLoader(false);
             nevigate("home_page", "", "ALERTS MANAGEMENT");
         })
-        .catch(error => console.log('error', error));
+        .catch(error => {
+            nevigate("error_global","","");
+        });
 }
 
 function logout(numOfPagesToGoBack) {
